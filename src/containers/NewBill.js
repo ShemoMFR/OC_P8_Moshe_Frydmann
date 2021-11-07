@@ -105,7 +105,7 @@ export default class NewBill {
       this.firestore.storage
         .ref(`justificatifs/${fileName}`)
         .put(file)
-        .then((snapshot) => snapshot.ref.getDownloadURL())
+        .then((snapshot) => console.log(snapshot.ref.getDownloadURL()))
         .then((url) => {
           this.fileUrl = url;
           this.fileName = fileName;
