@@ -20,10 +20,16 @@ const row = (bill) => {
   }
 
   const rows = (data) => {
-    const dataSorted = data.sort((a, b) =>
-      new Date(a.date) < new Date(b.date) ? 1 : -1
-    );
-    return dataSorted.map((bill) => row(bill)).join("");
+    const dataSorted =
+      data && data.length
+        ? data.sort((a, b) => new Date(b.date) - new Date(a.date))
+        : "";
+  
+    // orderData.date = formatDate(orderData.date.date());
+  
+    return data && data.length
+      ? dataSorted.map((bill) => row(bill)).join("")
+      : "";
   };
   
 
