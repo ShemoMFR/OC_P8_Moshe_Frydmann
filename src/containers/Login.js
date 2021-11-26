@@ -32,6 +32,7 @@ export default class Login {
     this.document.body.style.backgroundColor="#fff"
   }
 
+  /* erreur ici du copier coller entre admin et employé */
   handleSubmitAdmin = e => {
     const user = {
       type: "Admin",

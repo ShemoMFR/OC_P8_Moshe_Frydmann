@@ -19,7 +19,7 @@ export default class NewBill {
     const filePath = e.target.value.split(/\\/g)
     const fileName = filePath[filePath.length-1]
 
-
+    /* check des extensions pour les fichiers */
     const extensionCheck = /(png|jpg|jpeg)/g;
     const extension = fileName.split(".").pop();
     const matchExtension = extension.toLowerCase().match(extensionCheck);

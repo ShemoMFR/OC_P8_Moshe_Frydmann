@@ -19,6 +19,7 @@ const row = (bill) => {
     `)
   }
 
+  /* trie des notes de frais */
   const rows = (data) => {
     const dataSorted =
       data && data.length
